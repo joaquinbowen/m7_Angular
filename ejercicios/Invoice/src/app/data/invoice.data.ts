@@ -17,9 +17,9 @@ export const invoiceData: Invoice = {
         name: "Pablo",
         surname: "Arias",
         adress: {
-            city: "Quito",
-            principalStreet: "Cotocollao",
-            secondaryStreet: "Polo",
+            city: "Quitooo",
+            principalStreet: "Connecticut",
+            secondaryStreet: "Manabi",
             code: "378"
         },
     },
