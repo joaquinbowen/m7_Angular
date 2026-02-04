@@ -1,0 +1,8 @@
+///Crear Proyecto Angular
+ng new "nombreDelProyecto"
+///Alzar Servidor
+ng serve
+///Crear componente
+ng generate component components/"nombreDelComponente"
+///Crear service
+ng generate service services/"nombreDelService" 
