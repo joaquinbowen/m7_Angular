@@ -1,54 +1,62 @@
-<div>
-    <div>
-        <h2>FACTURA</h2>
-        <div>
-            <ul>
-                <li>No. {{invoice.id}} </li>
-            </ul>
+<div class="container">
+    <div class="card my-5">
+        <div class="card-header">
+            <h2>FACTURA</h2>
         </div>
-        <div>
-            <h3>EMPRESA</h3>
-            <ul>
-                <li>RUC: {{invoice.company.ruc}} </li>
-                <li>NOMBRE: {{invoice.company.name}} </li>
-                <li>DIRECCION: {{invoice.company.adress.city}}
-                    - {{invoice.company.adress.principalStreet}}
-                    {{invoice.company.adress.code}}
-                    {{invoice.company.adress.secondaryStreet}}
-                </li>
-            </ul>
-        </div>
-        <div>
-            <h3>CLIENTE</h3>
-            <ul>
-                <li>CEDULA: {{invoice.customer.id}} </li>
-                <li>NOMBRE: {{invoice.customer.name}} {{invoice.customer.surname}} </li>
-                <li>DIRECCION: {{invoice.customer.adress.city}}
-                    - {{invoice.customer.adress.principalStreet}}
-                    {{invoice.customer.adress.code}}
-                    {{invoice.customer.adress.secondaryStreet}}
-                </li>
-            </ul>
-        </div>
-        <div>
-            <table>
-                <thead>
-                    <th class="redTitle">PRODUCTO</th>
-                    <th>PRECIO UNITARIO</th>
-                    <th>CANTIDAD</th>
+        <div class="card-body">
+            <div>
+                <ul class="list-group">
+                    <li class="list-group-item">No. {{invoice.id}} </li>
+                </ul>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h3>EMPRESA</h3>
+                    <ul class="list-group">
+                        <li class="list-group-item">RUC: {{invoice.company.ruc}} </li>
+                        <li class="list-group-item">NOMBRE: {{invoice.company.name}} </li>
+                        <li class="list-group-item">DIRECCION: {{invoice.company.adress.city}}
+                            - {{invoice.company.adress.principalStreet}}
+                            {{invoice.company.adress.code}}
+                            {{invoice.company.adress.secondaryStreet}}
+                        </li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>CLIENTE</h3>
+                    <ul class="list-group">
+                        <li class="list-group-item">CEDULA: {{invoice.customer.id}} </li>
+                        <li class="list-group-item">NOMBRE: {{invoice.customer.name}} {{invoice.customer.surname}} </li>
+                        <li class="list-group-item">DIRECCION: {{invoice.customer.adress.city}}
+                            - {{invoice.customer.adress.principalStreet}}
+                            {{invoice.customer.adress.code}}
+                            {{invoice.customer.adress.secondaryStreet}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-                </thead>
-                <tbody>
-                    @for (item of invoice.items; track $index) {
+            <div class="card my-3">
+                <table class="table table-striped">
+                    <thead>
+                        <th>PRODUCTO</th>
+                        <th>PRECIO UNITARIO</th>
+                        <th>CANTIDAD</th>
+
+                    </thead>
+                    <tbody>
+                        @for (item of invoice.items; track $index) {
                         <tr>
                             <td>{{item.product.name}} </td>
                             <td>{{item.product.price}} </td>
                             <td>{{item.quantity}} </td>
                         </tr>
-                    }
+                        }
 
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </div>
         </div>
+
     </div>
 </div>

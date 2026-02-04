@@ -1,30 +1,40 @@
-<div>
-    <div>
-        <h2>Curso</h2>
-        <div>
-            <h3>{{course.name}} </h3>
+<div class="container">
+    <div class="card my-5">
+        <div class="card-header">
+            <h2>Curso</h2>
         </div>
-        <div>
-            <h3>Estudiantes</h3>
+        <div class="card-body">
             <div>
-                <table>
-                    <thead>
-                        <th>CEDULA</th>
-                        <th>NOMBRE</th>
-                        <th>APELLIDO</th>
-                    </thead>
-                    <tbody>
-                        @for (item of course.students; track $index) {
+                <ul class="list-group">
+                    <li class="list-group-item">{{course.name}}</li>
+                </ul>
+            </div>
+            <div class="card my-3">
+                <div class="card-header">
+                    <h3>Estudiantes</h3>
+                </div>
+
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <th>CEDULA</th>
+                            <th>NOMBRE</th>
+                            <th>APELLIDO</th>
+                        </thead>
+                        <tbody>
+                            @for (item of course.students; track $index) {
                             <tr>
                                 <td>{{item.identification}}</td>
                                 <td>{{item.name}} </td>
                                 <td>{{item.surname}} </td>
                             </tr>
-                        }
-                    </tbody>
-                </table>
-            </div>
+                            }
+                        </tbody>
+                    </table>
+                </div>
 
+            </div>
         </div>
+
     </div>
 </div>
