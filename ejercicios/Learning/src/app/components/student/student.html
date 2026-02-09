@@ -1,0 +1,12 @@
+<table class="table table-striped">
+    <thead>
+        <th>CEDULA</th>
+        <th>NOMBRE</th>
+        <th>APELLIDO</th>
+    </thead>
+    <tbody>
+        @for (item of students; track $index) {
+        <tr app-student-item [item]="item"></tr>
+        }
+    </tbody>
+</table>

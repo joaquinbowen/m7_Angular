@@ -15,7 +15,7 @@ export const invoiceData: Invoice = {
     customer: {
         id: "1725040789",
         name: "Pablo",
-        surname: "Arias",
+        surname: "Ariassssssssss",
         adress: {
             city: "Quitooo",
             principalStreet: "Connecticut",
@@ -28,11 +28,11 @@ export const invoiceData: Invoice = {
             id: 1,
             product: {
                 id: 10,
-                name: "Pan",
+                name: "Pannnnnnnnnnnncito",
                 price: 0.25,
-                category:{
-                    id:1,
-                    name:"Trigo"
+                category: {
+                    id: 1,
+                    name: "Trigoooooooooooouuuuuuu"
                 },
                 description: "Pan de ayer"
             },
@@ -44,9 +44,9 @@ export const invoiceData: Invoice = {
                 id: 7,
                 name: "Huevo",
                 price: 0.35,
-                category:{
-                    id:2,
-                    name:"Avicola"
+                category: {
+                    id: 2,
+                    name: "Avicola"
                 },
                 description: "Webo"
             },

@@ -11,50 +11,15 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <h3>EMPRESA</h3>
-                    <ul class="list-group">
-                        <li class="list-group-item">RUC: {{invoice.company.ruc}} </li>
-                        <li class="list-group-item">NOMBRE: {{invoice.company.name}} </li>
-                        <li class="list-group-item">DIRECCION: {{invoice.company.adress.city}}
-                            - {{invoice.company.adress.principalStreet}}
-                            {{invoice.company.adress.code}}
-                            {{invoice.company.adress.secondaryStreet}}
-                        </li>
-                    </ul>
+                    <app-company-view [company]="invoice.company"></app-company-view>
                 </div>
                 <div class="col">
-                    <h3>CLIENTE</h3>
-                    <ul class="list-group">
-                        <li class="list-group-item">CEDULA: {{invoice.customer.id}} </li>
-                        <li class="list-group-item">NOMBRE: {{invoice.customer.name}} {{invoice.customer.surname}} </li>
-                        <li class="list-group-item">DIRECCION: {{invoice.customer.adress.city}}
-                            - {{invoice.customer.adress.principalStreet}}
-                            {{invoice.customer.adress.code}}
-                            {{invoice.customer.adress.secondaryStreet}}
-                        </li>
-                    </ul>
+                    <app-customer-view [customer]="invoice.customer"></app-customer-view>
                 </div>
             </div>
 
             <div class="card my-3">
-                <table class="table table-striped">
-                    <thead>
-                        <th>PRODUCTO</th>
-                        <th>PRECIO UNITARIO</th>
-                        <th>CANTIDAD</th>
-
-                    </thead>
-                    <tbody>
-                        @for (item of invoice.items; track $index) {
-                        <tr>
-                            <td>{{item.product.name}} </td>
-                            <td>{{item.product.price}} </td>
-                            <td>{{item.quantity}} </td>
-                        </tr>
-                        }
-
-                    </tbody>
-                </table>
+                <app-invoice-detail-view [items]="invoice.items"></app-invoice-detail-view>
             </div>
         </div>
 
