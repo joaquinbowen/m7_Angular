@@ -1,12 +1,12 @@
 <div class="container">
     <div class="card my-5">
-        <div class="card-header">
+        <div class="card-header bg-primary text-white">
             <h2>FACTURA</h2>
         </div>
         <div class="card-body">
             <div>
-                <ul class="list-group">
-                    <li class="list-group-item">No. {{invoice.id}} </li>
+                <ul class="list-group mb-3">
+                    <li class="list-group-item"><strong>No.</strong> {{invoice.id}}</li>
                 </ul>
             </div>
             <div class="row">
@@ -18,10 +18,9 @@
                 </div>
             </div>
 
-            <div class="card my-3">
+            <div class="my-3">
                 <app-invoice-detail-view [items]="invoice.items"></app-invoice-detail-view>
             </div>
         </div>
-
     </div>
 </div>

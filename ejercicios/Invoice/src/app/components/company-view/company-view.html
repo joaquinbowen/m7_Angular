@@ -1,10 +1,16 @@
-<h3>EMPRESA</h3>
-<ul class="list-group">
-    <li class="list-group-item">RUC: {{company.ruc}} </li>
-    <li class="list-group-item">NOMBRE: {{company.name}} </li>
-    <li class="list-group-item">DIRECCION: {{company.adress.city}}
-        - {{company.adress.principalStreet}}
-        {{company.adress.code}}
-        {{company.adress.secondaryStreet}}
-    </li>
-</ul>
+<div class="card mb-3">
+    <div class="card-header bg-secondary text-white">
+        <h5>EMPRESA</h5>
+    </div>
+    <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><strong>RUC:</strong> {{company.ruc}}</li>
+            <li class="list-group-item"><strong>NOMBRE:</strong> {{company.name}}</li>
+            <li class="list-group-item"><strong>DIRECCION:</strong> {{company.adress.city}}
+                - {{company.adress.principalStreet}}
+                {{company.adress.code}}
+                {{company.adress.secondaryStreet}}
+            </li>
+        </ul>
+    </div>
+</div>

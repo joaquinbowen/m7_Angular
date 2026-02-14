@@ -1,10 +1,16 @@
-<h3>CLIENTE</h3>
-<ul class="list-group">
-    <li class="list-group-item">CEDULA: {{customer.id}} </li>
-    <li class="list-group-item">NOMBRE: {{customer.name}} {{customer.surname}} </li>
-    <li class="list-group-item">DIRECCION: {{customer.adress.city}}
-        - {{customer.adress.principalStreet}}
-        {{customer.adress.code}}
-        {{customer.adress.secondaryStreet}}
-    </li>
-</ul>
+<div class="card mb-3">
+    <div class="card-header bg-secondary text-white">
+        <h5>CLIENTE</h5>
+    </div>
+    <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><strong>CEDULA:</strong> {{customer.id}}</li>
+            <li class="list-group-item"><strong>NOMBRE:</strong> {{customer.name}} {{customer.surname}}</li>
+            <li class="list-group-item"><strong>DIRECCION:</strong> {{customer.adress.city}}
+                - {{customer.adress.principalStreet}}
+                {{customer.adress.code}}
+                {{customer.adress.secondaryStreet}}
+            </li>
+        </ul>
+    </div>
+</div>
