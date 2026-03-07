@@ -1,0 +1,56 @@
+<div class="container row ">
+    @for (item of sucursales; track $index) {
+    <div class="card my-4 col mx-1">
+        <div class=" card-header my-3 ">
+            <h2>{{item.name}}</h2>
+        </div>
+        <div>
+            <table class="table table-striped table-bordered">
+                <thead class="table-info">
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Capacidad</th>
+                        <th>Categoria</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    
+                    @for (servicio of item.servicios;track $index) {
+                    <tr>
+                        <td>{{servicio.name}} </td>
+                        <td>{{servicio.capacidad}} </td>
+                        <td>{{servicio.categoria.name}} </td>
+                    </tr>
+
+                    }
+
+                </tbody>
+            </table>
+            <div>
+                <div class="container mt-4">
+                    <div class="card my-4">
+                        <div class="card-header text-center">
+                            Capacidad de atencion diaria
+                        </div>
+                        <div class="card-body text-center">
+                            <p class="display-6">{{ calcularCapacidadSucursal(item) }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    }
+
+</div>
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header text-center">
+            Capacidad total de atencion diaria
+        </div>
+        <div class="card-body text-center">
+            <p class="display-4 text-primary">{{ capacidadTotal }}</p>
+        </div>
+    </div>
+</div>

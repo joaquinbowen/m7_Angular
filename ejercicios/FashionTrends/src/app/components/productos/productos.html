@@ -31,8 +31,12 @@
     }
 
 </div>
-<div>
-    @for (item of sucursales; track $index) {
-    @for (producto of item.productos; track $index) {}
-    }
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-body text-center">
+            <h3 class="card-title">Stock Total</h3>
+            <p class="display-4 text-primary">{{ stockTotal }}</p>
+            <small class="text-muted">Unidades en todas las sucursales</small>
+        </div>
+    </div>
 </div>

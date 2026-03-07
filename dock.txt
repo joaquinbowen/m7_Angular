@@ -2,9 +2,11 @@
 docker build -t ubuntu_juan .
 //ver capas
 docker history ubuntu_juan
+//run
+docker run -d -p 4000:4200 --name center autocar:latest
 //login
 docker login
 //etiquetar
-docker tag ubuntu_juan tusuario/ubuntu_juan:latest
+docker tag autocar:latest joaquinbowen721/autocar:latest
 //pushear
-docker push tusuario/ubuntu_juan:latest
+docker push joaquinbowen721/autocar:latest

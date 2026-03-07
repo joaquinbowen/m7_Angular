@@ -1,6 +1,5 @@
 import { Empresa } from "../models/empresa";
 
-export const stockTotal: number = 12;
 export const empresaData: Empresa = {
     name: "Fashion Trends",
     ruc: "172540479001",
@@ -37,3 +36,13 @@ export const empresaData: Empresa = {
         }]
     }]
 }
+
+// Calcula el stock total con un bucle simple
+let total = 0;
+for (const sucursal of empresaData.sucursales) {
+    for (const producto of sucursal.productos) {
+        total += producto.stock;
+    }
+}
+
+export const stockTotal: number = total;
