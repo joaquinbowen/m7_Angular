@@ -1,0 +1,3 @@
+//instalar cliente de angular
+npm install -g @angular/cli
+//y ya
