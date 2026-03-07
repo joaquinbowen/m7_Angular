@@ -1,0 +1,10 @@
+//construir imagen
+docker build -t ubuntu_juan .
+//ver capas
+docker history ubuntu_juan
+//login
+docker login
+//etiquetar
+docker tag ubuntu_juan tusuario/ubuntu_juan:latest
+//pushear
+docker push tusuario/ubuntu_juan:latest
